@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: ds-app-container
-          image: skolimowskad/zad2gitops:latest
+          image: skolimowskad/zad2gitops:16
           ports:
             - containerPort: 80
