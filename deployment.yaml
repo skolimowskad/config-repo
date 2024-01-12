@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ds-app-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: ds-app
+  template:
+    metadata:
+      labels:
+        app: ds-app
+    spec:
+      containers:
+        - name: ds-app-container
+          image: skolimowskad/zad2gitops:latest 
+          ports:
+            - containerPort: 80
